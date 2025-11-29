@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuerpos Celestes del Sistema Solar - Datos de Investigación</title>
+    <style>
+        :root {
+            --bg-color: #0b0d17;
+            --text-color: #d0d6f9;
+            --accent-color: #38bdf8;
+            --table-header-bg: #1e293b;
+            --table-row-even: #111827;
+            --table-row-hover: #1f2937;
+            --border-color: #334155;
+            --highlight-bg: rgba(56, 189, 248, 0.1);
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background-color: var(--table-row-even);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        thead {
+            background-color: var(--table-header-bg);
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #ffffff;
+            border-bottom: 2px solid var(--accent-color);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: #0f131f;
+        }
+
+        tr:hover {
+            background-color: var(--table-row-hover);
+            transition: background-color 0.2s;
+        }
+
+        /* Destacar filas de satélites importantes */
+        tr.satellite td {
+            color: #a5f3fc;
+        }
+        
+        /* Destacar columna Gravedad */
+        td:nth-child(7), th:nth-child(7) {
+            background-color: var(--highlight-bg);
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+        }
+        
+        td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+             font-family: 'Consolas', 'Monaco', monospace;
+             font-size: 0.9em;
+        }
+
+        .video-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background-color: #ef4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
+
+        .video-link:hover {
+            background-color: #dc2626;
+        }
+
+        .note {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            th, td { padding: 10px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cuerpos Celestes del Sistema Solar</h1>
+        <p class="subtitle">Base de datos de astrofísica. Compara la gravedad (g) de tu experimento con estos valores para localizar tu ubicación.</p>
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cuerpo Celeste</th>
+                    <th>Tipo</th>
+                    <th>Distancia al Sol<br><small>(Millones de km)</small></th>
+                    <th>Año<br><small>(Periodo Orbital)</small></th>
+                    <th>Día<br><small>(Rotación)</small></th>
+                    <th>Masa<br><small>(kg)</small></th>
+                    <th>Gravedad<br><small>(m/s²)</small></th>
+                    <th>Multimedia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- MERCURIO -->
+                <tr>
+                    <td>Mercurio</td>
+                    <td>Planeta</td>
+                    <td>57.9</td>
+                    <td>88 días</td>
+                    <td>58.6 días</td>
+                    <td>3.30 × 10<sup>23</sup></td>
+                    <td>3.70</td>
+                    <td><a href="https://youtu.be/MzsbpWPBc0s?si=eogEEFvJYURfeiCS" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- VENUS -->
+                <tr>
+                    <td>Venus</td>
+                    <td>Planeta</td>
+                    <td>108.2</td>
+                    <td>225 días</td>
+                    <td>243 días</td>
+                    <td>4.87 × 10<sup>24</sup></td>
+                    <td>8.87</td>
+                    <td><a href="https://youtu.be/ink28v2xlGY?si=Ayp95U-fk_wWV8UF" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- TIERRA (Grupo C) -->
+                <tr>
+                    <td>La Tierra</td>
+                    <td>Planeta</td>
+                    <td>149.6</td>
+                    <td>365.25 días</td>
+                    <td>23h 56m</td>
+                    <td>5.97 × 10<sup>24</sup></td>
+                    <td>9.81</td>
+                    <td><a href="https://www.youtube.com/watch?v=8I1zK3XhF90" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- LUNA (Grupo A) -->
+                <tr class="satellite">
+                    <td>La Luna</td>
+                    <td>Satélite (Tierra)</td>
+                    <td>149.6 <small>(órbita Tierra)</small></td>
+                    <td>27.3 días</td>
+                    <td>27.3 días</td>
+                    <td>7.35 × 10<sup>22</sup></td>
+                    <td>1.62</td>
+                    <td><a href="https://www.youtube.com/watch?v=lfPcx0u8lWI" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- MARTE (Grupo B) -->
+                <tr>
+                    <td>Marte</td>
+                    <td>Planeta</td>
+                    <td>227.9</td>
+                    <td>687 días</td>
+                    <td>24h 37m</td>
+                    <td>6.39 × 10<sup>23</sup></td>
+                    <td>3.71</td>
+                    <td><a href="https://www.youtube.com/watch?v=o0v4C4W_QMI" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- JÚPITER (Grupo E) -->
+                <tr>
+                    <td>Júpiter</td>
+                    <td>Planeta</td>
+                    <td>778.5</td>
+                    <td>11.8 años</td>
+                    <td>9h 55m</td>
+                    <td>1.90 × 10<sup>27</sup></td>
+                    <td>24.79</td>
+                    <td><a href="https://youtu.be/02oQIvTCzNI?si=fmaZ1-gUKsGtIZld" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- EUROPA (Candidato Vida) -->
+                <tr class="satellite">
+                    <td>Europa</td>
+                    <td>Satélite (Júpiter)</td>
+                    <td>778.5 <small>(órbita Júpiter)</small></td>
+                    <td>3.55 días</td>
+                    <td>3.55 días</td>
+                    <td>4.80 × 10<sup>22</sup></td>
+                    <td>1.31</td>
+                    <td><a href="https://www.youtube.com/watch?v=zwniesat_CI" target="_blank" class="video-link">▶ Ver Video (NASA)</a></td>
+                </tr>
+                <!-- SATURNO -->
+                <tr>
+                    <td>Saturno</td>
+                    <td>Planeta</td>
+                    <td>1,434</td>
+                    <td>29.5 años</td>
+                    <td>10h 33m</td>
+                    <td>5.68 × 10<sup>26</sup></td>
+                    <td>10.44</td>
+                    <td><a href="https://youtu.be/SIxyMBjtPYw?si=FcAjh1F_LBb4xd_n" target="_blank" class="video-link">▶ Ver Video</a></td>
+                </tr>
+                <!-- URANO -->
+                <tr>
+                    <td>Urano</td>
+                    <td>Planeta</td>
+                    <td>2,871</td>
+                    <td>84 años</td>
+                    <td>17h 14m</td>
+                    <td>8.68 × 10<sup>25</sup></td>
+                    <td>8.87</td>
+                    <td><a href="https://www.youtube.com/watch?v=dTU5TkW4U8E" target="_blank" class="video-link">▶ Ver Video (Smile & Learn)</a></td>
+                </tr>
+                <!-- NEPTUNO (Grupo D) -->
+                <tr>
+                    <td>Neptuno</td>
+                    <td>Planeta</td>
+                    <td>4,495</td>
+                    <td>165 años</td>
+                    <td>16h 6m</td>
+                    <td>1.02 × 10<sup>26</sup></td>
+                    <td>11.15</td>
+                    <td><a href="https://www.youtube.com/watch?v=ZYNmZnK6zn4" target="_blank" class="video-link">▶ Ver Video (Smile & Learn)</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note">* Nota: Los datos de gravedad son superficiales (o 1 bar). Las distancias son medias.</p>
+    </div>
+
+</body>
+</html>
